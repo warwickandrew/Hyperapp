@@ -1,0 +1,40 @@
+body{
+  color: $black;
+}
+
+h5{
+  color: $titleColor;
+  font-size: 0.7rem;
+  margin: .5rem 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+h2{
+  font-size: 3rem;
+  font-family: $displayFont;
+  text-transform: capitalize;
+  margin: .5rem 0 3rem;
+  color: $black;
+}
+
+p{
+  font-size: 1.1rem;
+  color: $paragraphColor;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+a{
+  transition: all .5s ease-in-out;
+  &:hover{
+    color: $red;
+  }
+}
+
+.texturebg{
+  background: $greyBG;
+  background-image:url("https://inspirationhut.net/wp-content/uploads/2014/09/cream-paper-subtle-pattern.jpg");
+  background-position: center;
+  background-repeat: repeat;
+}
