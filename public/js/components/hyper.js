@@ -48,25 +48,33 @@ exports.default = App;
 
 var _hyperapp = __webpack_require__(0);
 
-var _Header = __webpack_require__(13);
+var _Header = __webpack_require__(15);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _TopImg = __webpack_require__(17);
+var _TopImg = __webpack_require__(19);
 
 var _TopImg2 = _interopRequireDefault(_TopImg);
 
-var _OurStory = __webpack_require__(14);
+var _OurStory = __webpack_require__(16);
 
 var _OurStory2 = _interopRequireDefault(_OurStory);
 
-var _SpecialMenu = __webpack_require__(16);
+var _SpecialMenu = __webpack_require__(18);
 
 var _SpecialMenu2 = _interopRequireDefault(_SpecialMenu);
 
-var _RandomQuote = __webpack_require__(15);
+var _RandomQuote = __webpack_require__(17);
 
 var _RandomQuote2 = _interopRequireDefault(_RandomQuote);
+
+var _ContactUs = __webpack_require__(13);
+
+var _ContactUs2 = _interopRequireDefault(_ContactUs);
+
+var _Footer = __webpack_require__(14);
+
+var _Footer2 = _interopRequireDefault(_Footer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -81,7 +89,9 @@ function App(_ref) {
     (0, _hyperapp.h)(_TopImg2.default, { state: state, actions: actions }),
     (0, _hyperapp.h)(_OurStory2.default, { state: state, actions: actions }),
     (0, _hyperapp.h)(_SpecialMenu2.default, { state: state, actions: actions }),
-    (0, _hyperapp.h)(_RandomQuote2.default, { state: state, actions: actions })
+    (0, _hyperapp.h)(_RandomQuote2.default, { state: state, actions: actions }),
+    (0, _hyperapp.h)(_ContactUs2.default, { state: state, actions: actions }),
+    (0, _hyperapp.h)(_Footer2.default, { state: state, actions: actions })
   );
 }
 
@@ -95,13 +105,238 @@ function App(_ref) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+var companyInfo = {
+  title: 'Xtreme Hair Tanning Beauty',
+  location: 'Ballymena Northern Ireland'
+};
+
 var globalState = exports.globalState = {
-  count: 0
+  count: 0,
+  companyInfo: companyInfo
 };
 
 /***/ }),
 /* 12 */,
 /* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = ContactUs;
+
+var _hyperapp = __webpack_require__(0);
+
+function ContactUs(_ref) {
+  var state = _ref.state,
+      actions = _ref.actions;
+
+  return (0, _hyperapp.h)(
+    "section",
+    { id: "ContactUs", "class": "texturebg" },
+    (0, _hyperapp.h)(
+      "div",
+      { "class": "container" },
+      (0, _hyperapp.h)(
+        "h5",
+        { "class": "comp-title" },
+        "Contact Us"
+      ),
+      (0, _hyperapp.h)(
+        "h2",
+        null,
+        "Make A Booking"
+      ),
+      (0, _hyperapp.h)(
+        "div",
+        { "class": "box" },
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "row" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "col-md-6" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "title" },
+              state.globalState.companyInfo.location
+            ),
+            (0, _hyperapp.h)(
+              "h6",
+              { "class": "address" },
+              "6 Iona Ballykeel 1 Co Antrim BT42 4AQ"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              null,
+              (0, _hyperapp.h)(
+                "strong",
+                null,
+                "email:"
+              ),
+              (0, _hyperapp.h)(
+                "a",
+                { href: "mailto:info@xtremehairdressers.com" },
+                "info@xtremehairdressers.com"
+              )
+            )
+          ),
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "col-md-6" },
+            (0, _hyperapp.h)(
+              "h6",
+              null,
+              "Phone:"
+            ),
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "title" },
+              "028 25862343"
+            ),
+            (0, _hyperapp.h)(
+              "h6",
+              null,
+              "Lunch Service:"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              null,
+              "Friday, Saturday & Sunday: ",
+              (0, _hyperapp.h)("br", null),
+              "Bookings from 12pm - 1:30pm"
+            ),
+            (0, _hyperapp.h)(
+              "h6",
+              null,
+              "Dinner Service:"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              null,
+              "Daily: ",
+              (0, _hyperapp.h)("br", null),
+              "Bookings from 6pm - 9:30pm"
+            )
+          )
+        )
+      )
+    )
+  );
+}
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Footer;
+
+var _hyperapp = __webpack_require__(0);
+
+function Footer(_ref) {
+  var state = _ref.state,
+      actions = _ref.actions;
+
+  return (0, _hyperapp.h)(
+    "footer",
+    null,
+    (0, _hyperapp.h)(
+      "div",
+      { "class": "container" },
+      (0, _hyperapp.h)(
+        "h1",
+        null,
+        "LOGO"
+      ),
+      (0, _hyperapp.h)(
+        "nav",
+        { "class": "menu" },
+        (0, _hyperapp.h)(
+          "a",
+          { href: "#" },
+          "Our Story"
+        ),
+        (0, _hyperapp.h)(
+          "a",
+          { href: "#" },
+          "Reviews"
+        ),
+        (0, _hyperapp.h)(
+          "a",
+          { href: "#" },
+          "Special Offers"
+        ),
+        (0, _hyperapp.h)(
+          "a",
+          { href: "#" },
+          "Book Appointment"
+        ),
+        (0, _hyperapp.h)(
+          "a",
+          { href: "#" },
+          "Contact Us"
+        )
+      ),
+      (0, _hyperapp.h)(
+        "ul",
+        { "class": "social-media" },
+        (0, _hyperapp.h)(
+          "li",
+          null,
+          (0, _hyperapp.h)(
+            "a",
+            { href: "#", target: "new" },
+            (0, _hyperapp.h)("i", { "class": "fa fa-facebook-square", "aria-hidden": "true" })
+          )
+        ),
+        (0, _hyperapp.h)(
+          "li",
+          null,
+          (0, _hyperapp.h)(
+            "a",
+            { href: "#", target: "new" },
+            (0, _hyperapp.h)("i", { "class": "fa fa-twitter", "aria-hidden": "true" })
+          )
+        ),
+        (0, _hyperapp.h)(
+          "li",
+          null,
+          (0, _hyperapp.h)(
+            "a",
+            { href: "#", target: "new" },
+            (0, _hyperapp.h)("i", { "class": "fa fa-google-plus", "aria-hidden": "true" })
+          )
+        ),
+        (0, _hyperapp.h)(
+          "li",
+          null,
+          (0, _hyperapp.h)(
+            "a",
+            { href: "#", target: "new" },
+            (0, _hyperapp.h)("i", { "class": "fa fa-instagram", "aria-hidden": "true" })
+          )
+        )
+      ),
+      (0, _hyperapp.h)(
+        "div",
+        { "class": "copyright" },
+        "\xA9 2018 Copyright"
+      )
+    )
+  );
+}
+
+/***/ }),
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -135,27 +370,27 @@ function Header(_ref) {
         (0, _hyperapp.h)(
           "a",
           { href: "#" },
-          "Price-List"
+          "Our Story"
         ),
         (0, _hyperapp.h)(
           "a",
           { href: "#" },
-          "Party Plans"
+          "Reviews"
         ),
         (0, _hyperapp.h)(
           "a",
           { href: "#" },
-          "Locations"
+          "Special Offers"
         ),
         (0, _hyperapp.h)(
           "a",
           { href: "#" },
-          "Rewards"
+          "Book Appointment"
         ),
         (0, _hyperapp.h)(
           "a",
           { href: "#" },
-          "Reservations"
+          "Contact Us"
         )
       )
     )
@@ -165,7 +400,7 @@ function Header(_ref) {
 // <Button state={state} actions={actions}/>
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -236,7 +471,7 @@ function OurStory(_ref) {
 }
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -274,7 +509,7 @@ function RandomQuote(_ref) {
 }
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -390,6 +625,87 @@ function SpecialMenu(_ref) {
               "Washing, Mesh, Cut, Blow Dry, T-Bar on top"
             )
           )
+        ),
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-4" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "box" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "box-img" },
+              (0, _hyperapp.h)(
+                "div",
+                { "class": "price-circle" },
+                "\xA325"
+              )
+            ),
+            (0, _hyperapp.h)(
+              "span",
+              { "class": "title" },
+              "Full Cut Wash & Blow Dry"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              { "class": "details" },
+              "Washing, Mesh, Cut, Blow Dry, T-Bar on top"
+            )
+          )
+        ),
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-4" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "box" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "box-img" },
+              (0, _hyperapp.h)(
+                "div",
+                { "class": "price-circle" },
+                "\xA325"
+              )
+            ),
+            (0, _hyperapp.h)(
+              "span",
+              { "class": "title" },
+              "Full Cut Wash & Blow Dry"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              { "class": "details" },
+              "Washing, Mesh, Cut, Blow Dry, T-Bar on top"
+            )
+          )
+        ),
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-4" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "box" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "box-img" },
+              (0, _hyperapp.h)(
+                "div",
+                { "class": "price-circle" },
+                "\xA325"
+              )
+            ),
+            (0, _hyperapp.h)(
+              "span",
+              { "class": "title" },
+              "Full Cut Wash & Blow Dry"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              { "class": "details" },
+              "Washing, Mesh, Cut, Blow Dry, T-Bar on top"
+            )
+          )
         )
       ),
       (0, _hyperapp.h)(
@@ -402,7 +718,7 @@ function SpecialMenu(_ref) {
 }
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -436,11 +752,7 @@ function TopImg(_ref) {
         (0, _hyperapp.h)(
           "h1",
           null,
-          "X-treme Hair",
-          (0, _hyperapp.h)("br", null),
-          " Tanning & ",
-          (0, _hyperapp.h)("br", null),
-          "Beauty"
+          state.globalState.companyInfo.title
         )
       ),
       (0, _hyperapp.h)(
@@ -483,7 +795,7 @@ function TopImg(_ref) {
 }
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -530,4 +842,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 });
 
 /***/ })
-],[18]);
+],[20]);

@@ -8,11 +8,11 @@ export default function Header({state, actions}) {
       Logo
     </div>
     <nav>
-      <a href="#">Price-List</a>
-      <a href="#">Party Plans</a>
-      <a href="#">Locations</a>
-      <a href="#">Rewards</a>
-      <a href="#">Reservations</a>
+    <a href="#">Our Story</a>
+    <a href="#">Reviews</a>
+    <a href="#">Special Offers</a>
+    <a href="#">Book Appointment</a>
+    <a href="#">Contact Us</a>
     </nav>
   </div>
   </header>

@@ -6,7 +6,7 @@ export default function TopImg({state, actions}) {
   <div class="container">
     <div class="title">
       <h5>Welcome</h5>
-      <h1>X-treme Hair<br/> Tanning & <br/>Beauty</h1>
+      <h1>{state.globalState.companyInfo.title}</h1>
     </div>
     <div class="contact-info">
       <div class="container">
